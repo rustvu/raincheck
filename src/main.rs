@@ -85,7 +85,6 @@ fn get_rain_forecast(client: &Client, location: &Location) -> Vec<(String, u64)>
     //println!("{:#?}", periods);
 
     let mut forecast = Vec::new();
-    // TODO: process probabilityOfPrecipitation
     for period in periods {
         let name = period.get("name").unwrap().as_str().unwrap().to_string();
         let chance_of_rain = period
